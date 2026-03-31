@@ -85,6 +85,9 @@ vector<int> N(const vector<int> &p)
     vector<int> q=p;
     int L=rand()%(n-1)+1;
     int R=rand()%(n-1)+1;
+    while (L==R){
+        R=rand()%(n-1)+1;
+    }
     if (L>R){
         swap(L,R);
     }
@@ -93,7 +96,7 @@ vector<int> N(const vector<int> &p)
 }
 double drop(double t)
 {
-    return t*0.995;
+    return t*0.999;
 }
 double calc_p()
 {
